@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+h1{
+    font-family: 'Gilroy-Bold';
+    overflow-x: hidden;
+    font-size: 2.3rem;
+    color: black;   
+    line-height: 2.8rem;
+    overflow: hidden;
+    font-weight: 900;
+    font-style: normal;
+}
+p{
+    font-family: 'Gilroy-Light';
+    font-weight: 300;
+    font-style: normal;
+}
+h7{
+    font-family: 'Gilroy-Medium';
+    font-weight: 900;
+    font-style: normal;
+}

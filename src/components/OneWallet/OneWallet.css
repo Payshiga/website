@@ -1,0 +1,133 @@
+.section{
+    padding-top: 4.7rem;
+    overflow: visible;
+    background-color: #0f0f0e;
+    height: 50rem;
+}
+.content{
+    margin: 4rem 14rem;
+    display: flex;
+    max-height: 40rem;
+    overflow: visible;
+}
+.content-left{
+    width: 50%;
+}
+.content-left > h1{
+    width: 30rem;
+    color: white;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    padding-bottom: 2rem;
+}
+.content-left > p{
+    font-size: 1.1rem;
+    color: #a5a5a4;
+    width: 30rem;
+    padding-bottom: 5rem;
+}
+.qr_code-sec{
+    display: flex;
+    margin-bottom: 6rem;
+}
+.qr_code-sec > img{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 0.6rem;
+    margin-right: 1.2rem;
+}
+.qr-code-sec-text > p{
+    font-family: 'Gilroy-Medium';
+    font-weight: 800;
+    font-style: normal;
+    color: white;
+    font-size: 1rem;
+    width: 7rem ;
+    padding-bottom: 0.5rem;
+    padding-top: 0.6rem;
+    line-height: 1.5rem;
+}
+.trusted_by > p{
+    color: white;
+    margin-bottom: 1.3rem;
+}
+.trusted_by-img{
+    margin-right: 2rem;
+}
+.content-right{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 30rem;
+}
+.content-right > img{
+    width: 36rem;
+    height: auto;
+    filter: drop-shadow(0.1rem 0.1rem 0.5rem black);
+}
+
+@media only screen and (max-width: 1400px) 
+{
+    .content{
+        display: none;
+    }
+    .wallet-content-mob{
+        padding-top: 4.7rem;
+    }
+    .wallet-content-mob-text{
+        padding: 3rem 3rem;
+    }
+    .wallet-content-mob-text > h1{
+        color: white;
+        width: 100%;
+        margin-bottom: 1.2rem;
+        line-height: 2.5rem;
+        text-align: center;
+        font-size: 2rem;
+    }   
+    .wallet-content-mob-text > p{
+        color:#70706f;
+        width: 100%;
+        text-align: center;
+        font-size: 0.9rem;
+        padding: 0;
+        margin: 0;
+    }
+    .wallet-content-mob-stores{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0rem 2.5rem;
+        padding-bottom: 4rem;
+    }
+    .wallet-content-mob-company{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .wallet-content-mob-company > p{
+        color:#70706f;
+        text-align: center;
+        width: 80%;
+        padding-bottom: 3rem;
+    }
+    .wallet-content-mob-company-logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+        padding-left: 10px;
+    }
+    .wallet-content-mob-company-logo > img{
+        /* width: 25%; */
+        margin-right: 2rem;
+        margin-top: 2rem;
+    }
+}
+@media only screen and (min-width: 1400px) {
+    .wallet-content-mob{
+        display: none;
+    }
+}
