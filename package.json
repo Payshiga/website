@@ -1,6 +1,6 @@
 {
-  "name": "expense-tracker-react",
-  "version": "0.1.0",
+  "name": "payshiga-website",
+  "version": "1.0",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
