@@ -7,13 +7,14 @@ import Layout from './Layout'
 const App = () => {
   return (
     <>
-      <BrowserRouter>
+    <Layout />
+      {/* <BrowserRouter>
           <ScrollToTop/>
         <Routes>
           <Route path="/" exact element={<Layout />} />
           <Route path="/privacy-policy" exact element={<Privacy/>} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </>
   )
 }
