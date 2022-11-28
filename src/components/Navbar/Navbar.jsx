@@ -25,10 +25,12 @@ const Navbar = () => {
     <>
       <nav className='Navbar'>
         <div className='nav-left'>
+        <a href="/">
           <img
             src={Shiga}
             alt="Shiga"
           />
+          </a>
         </div>
         <div className='hiddiv'>
           {logo}

@@ -7,6 +7,7 @@ import Layout from './Layout'
 const App = () => {
   return (
     <>
+   < ScrollToTop />
     <Layout />
       {/* <BrowserRouter>
           <ScrollToTop/>
