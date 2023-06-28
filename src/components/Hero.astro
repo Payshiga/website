@@ -1,0 +1,110 @@
+---
+---
+
+<section class="hero">
+  <div class="hero__info">
+    <div class="hero__info--top">
+      <h1 class="hero__title">One wallet<br />Global payment</h1>
+      <p class="hero__desc">
+        Shiga by Payshiga is the easiest way to make hassle-free cross-border
+        payments on the go.
+      </p>
+    </div>
+
+    <div class="hero__qr-code">
+      <img src="/img/qr-code.png" alt="qr code to download app" />
+      <div>
+        <span>Scan QR code<br />to download<br />the Shiga app</span>
+        <img src="/img/hero-qr-icon.png" alt="arrow pointing left" />
+      </div>
+    </div>
+
+    <div class="hero__trusted">
+      <p>Trusted by the fast-growing companies as seen on:</p>
+      <ul>
+        <li><img src="/img/techpoint.svg" alt="Techpoint logo" /></li>
+        <li><img src="/img/guardian_logo.svg" alt=" Guardian logo" /></li>
+        <li><img src="/img/techcrunch.svg" alt=" TechCrunch logo" /></li>
+        <li><img src="/img/forbes_logo.svg" alt="Forbes logo" /></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="hero__img">
+    <img src="/img/hero-phone.png" alt="Payshiga app" />
+  </div>
+</section>
+
+<style lang="scss">
+  @import "../../styles/_variables.scss";
+
+  .hero {
+    width: fit-content;
+    height: 100vh;
+    padding-top: 100px;
+    display: flex;
+    column-gap: 36px;
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      row-gap: 90px;
+
+      &--top {
+        .hero__title {
+          font-size: 3rem;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+        }
+
+        .hero__desc {
+          color: $textTertiary;
+          max-width: 517px;
+        }
+      }
+
+      .hero__qr-code {
+        display: flex;
+        column-gap: 25px;
+
+        img {
+          width: 120px;
+        }
+
+        div {
+          span {
+            display: block;
+            max-width: 160px;
+            margin-bottom: 15px;
+          }
+
+          img {
+            width: 50px;
+          }
+        }
+      }
+
+      .hero__trusted {
+        p {
+          margin-bottom: 30px;
+        }
+
+        ul {
+          display: flex;
+          gap: 30px;
+
+          li > img {
+            filter: grayscale(100);
+          }
+        }
+      }
+    }
+
+    &__img {
+      margin-top: 50px;
+      img {
+        max-width: 410px;
+      }
+    }
+  }
+</style>

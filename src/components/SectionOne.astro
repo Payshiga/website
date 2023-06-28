@@ -1,0 +1,81 @@
+---
+---
+
+<section class="section-one">
+  <div class="section-one__info">
+    <h2 class="section-one__title">
+      Make seamless cross-border payments to 190 countries on the go with zero
+      fees.
+    </h2>
+    <p class="section-one__desc">
+      Send money to anyone, anywhere, anytime, for zero fees. We offer the best
+      FX rates with our lightning-speed transfers.
+    </p>
+    <ul class="section-one__store-links">
+      <li class="section-one__appstore">
+        <a href="/"
+          ><img src="/img/appstore.png" alt="appstore info graphic" /></a
+        >
+      </li>
+      <li class="section-one__appstore">
+        <a href="/"
+          ><img src="/img/playstore.png" alt="playstore info graphic" /></a
+        >
+      </li>
+    </ul>
+  </div>
+
+  <img
+    src="/img/section-one_img.svg"
+    alt="I really dont know"
+    class="section-one__img"
+  />
+</section>
+
+<style lang="scss">
+  @import "../../styles/_variables.scss";
+
+  .section-one {
+    // height: 400px;
+    background-color: $bgSecondary;
+    color: $textSecondary;
+    display: flex;
+    justify-content: center;
+
+    &__info {
+      max-width: 500px;
+
+      .section-one__title {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+
+      .section-one__desc {
+        margin-bottom: 50px;
+      }
+
+      .section-one__store-links {
+        display: flex;
+        gap: 20px;
+
+        li > a {
+          background-color: $bgTertiary;
+          padding: 15px 20px;
+          border-radius: 50px;
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 100px;
+          }
+        }
+      }
+    }
+
+    &__img {
+      max-width: 400px;
+      margin-top: 75px;
+      align-self: flex-end;
+    }
+  }
+</style>

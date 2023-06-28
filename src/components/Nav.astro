@@ -1,0 +1,49 @@
+---
+---
+
+<nav class="nav">
+  <div class="nav__logo">
+    <img src="/img/logo.png" alt="Shiga logo" />
+  </div>
+
+  <ul class="nav__list">
+    <li class="nav__item">Career</li>
+    <li class="nav__item">Blog</li>
+    <li class="nav__item">FAQs</li>
+  </ul>
+
+  <a href="/" class="nav__download-btn"> Download App</a>
+</nav>
+
+<style lang="scss">
+  @import "../../styles/_variables.scss";
+
+  .nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &__logo {
+      img {
+        width: 67px;
+      }
+    }
+
+    &__list {
+      display: flex;
+      gap: 50px;
+    }
+
+    &__download-btn {
+      padding: 8px 16px;
+      background-color: $bgSecondary;
+      border-radius: 20px;
+      color: $bgPrimary;
+    }
+  }
+</style>
