@@ -11,13 +11,26 @@
       </p>
     </div>
 
-    <div class="hero__qr-code">
+    <div class="qr-code">
       <img src="/img/qr-code.png" alt="qr code to download app" />
       <div>
         <span>Scan QR code<br />to download<br />the Shiga app</span>
         <img src="/img/hero-qr-icon.png" alt="arrow pointing left" />
       </div>
     </div>
+
+    <ul class="hero__store-links">
+      <li class="hero__appstore">
+        <a href="/"
+          ><img src="/img/appstore-alt.png" alt="appstore info graphic" /></a
+        >
+      </li>
+      <li class="hero__appstore">
+        <a href="/"
+          ><img src="/img/playstore-alt.png" alt="playstore info graphic" /></a
+        >
+      </li>
+    </ul>
 
     <div class="hero__trusted">
       <p>Trusted by the fast-growing companies as seen on:</p>
@@ -37,24 +50,38 @@
 
 <style lang="scss">
   @import "../../styles/_variables.scss";
+  @import "../../styles/_breakpoints.scss";
 
   .hero {
-    width: fit-content;
     height: 100vh;
     padding-top: 100px;
     display: flex;
     column-gap: 36px;
+
+    @include media("<=tablet") {
+      text-align: center;
+      justify-content: center;
+      height: 100%;
+    }
 
     &__info {
       display: flex;
       flex-direction: column;
       row-gap: 90px;
 
+      @include media("<=tablet") {
+        align-items: center;
+      }
+
       &--top {
         .hero__title {
           font-size: 3rem;
           text-transform: uppercase;
           margin-bottom: 20px;
+
+          @include media("<=tablet") {
+            font-size: 1.5rem;
+          }
         }
 
         .hero__desc {
@@ -63,23 +90,29 @@
         }
       }
 
-      .hero__qr-code {
-        display: flex;
-        column-gap: 25px;
+      .qr-code {
+        @include media("<=tablet") {
+          display: none;
+        }
+      }
 
-        img {
-          width: 120px;
+      .hero__store-links {
+        display: none;
+        gap: 20px;
+
+        @include media("<=tablet") {
+          display: flex;
         }
 
-        div {
-          span {
-            display: block;
-            max-width: 160px;
-            margin-bottom: 15px;
-          }
+        li > a {
+          background-color: $bgSecondary;
+          padding: 10px 15px;
+          border-radius: 50px;
+          display: flex;
+          align-items: center;
 
           img {
-            width: 50px;
+            width: 75px;
           }
         }
       }
@@ -93,8 +126,21 @@
           display: flex;
           gap: 30px;
 
-          li > img {
-            filter: grayscale(100);
+          @include media("<=tablet") {
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+
+          li {
+            height: 100%;
+
+            img {
+              filter: grayscale(100);
+
+              @include media("<=tablet") {
+                width: 100px;
+              }
+            }
           }
         }
       }
@@ -102,6 +148,11 @@
 
     &__img {
       margin-top: 50px;
+
+      @include media("<=tablet") {
+        display: none;
+      }
+
       img {
         max-width: 410px;
       }

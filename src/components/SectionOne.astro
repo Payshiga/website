@@ -26,7 +26,7 @@
   </div>
 
   <img
-    src="/img/section-one_img.svg"
+    src="/img/section-one_img-alt.png"
     alt="I really dont know"
     class="section-one__img"
   />
@@ -34,6 +34,7 @@
 
 <style lang="scss">
   @import "../../styles/_variables.scss";
+  @import "../../styles/_breakpoints.scss";
 
   .section-one {
     // height: 400px;
@@ -41,6 +42,11 @@
     color: $textSecondary;
     display: flex;
     justify-content: center;
+    padding-bottom: 0;
+
+    @include media("<=tablet") {
+      display: none;
+    }
 
     &__info {
       max-width: 500px;
@@ -51,7 +57,7 @@
       }
 
       .section-one__desc {
-        margin-bottom: 50px;
+        margin-bottom: 40px;
       }
 
       .section-one__store-links {
@@ -74,8 +80,8 @@
 
     &__img {
       max-width: 400px;
-      margin-top: 75px;
-      align-self: flex-end;
+      margin-top: 150px;
+      // align-self: flex-end;
     }
   }
 </style>

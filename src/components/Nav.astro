@@ -13,10 +13,13 @@
   </ul>
 
   <a href="/" class="nav__download-btn"> Download App</a>
+
+  <img src="/img/burger-icon.svg" alt="burger icon" class="nav__burger" />
 </nav>
 
 <style lang="scss">
   @import "../../styles/_variables.scss";
+  @import "../../styles/_breakpoints.scss";
 
   .nav {
     width: 100%;
@@ -28,15 +31,36 @@
     top: 0;
     left: 0;
 
+    @include media("<=tablet") {
+      padding: 1rem;
+    }
+
     &__logo {
       img {
         width: 67px;
+
+        @include media("<=tablet") {
+          width: 57px;
+        }
+      }
+    }
+
+    &__burger {
+      display: none;
+      width: 16px;
+
+      @include media("<=tablet") {
+        display: block;
       }
     }
 
     &__list {
       display: flex;
       gap: 50px;
+
+      @include media("<=tablet") {
+        display: none;
+      }
     }
 
     &__download-btn {
@@ -44,6 +68,10 @@
       background-color: $bgSecondary;
       border-radius: 20px;
       color: $bgPrimary;
+
+      @include media("<=tablet") {
+        display: none;
+      }
     }
   }
 </style>
