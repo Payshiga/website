@@ -1,0 +1,107 @@
+---
+---
+
+<section class="get-started">
+  <div class="get-started__info">
+    <h2 class="get-started__title">
+      Get started with Shiga,<br />It’s <span>FREE!</span>
+    </h2>
+    <p class="get-started__desc">
+      Create an account with payshiga to plug into the easy way of making
+      cross-border transactions on the go.
+    </p>
+
+    <ul class="get-started__store-links">
+      <li class="get-started__appstore">
+        <a href="/"
+          ><img src="/img/appstore.png" alt="appstore info graphic" /></a
+        >
+      </li>
+      <li class="get-started__appstore">
+        <a href="/"
+          ><img src="/img/playstore.png" alt="playstore info graphic" /></a
+        >
+      </li>
+    </ul>
+  </div>
+
+  <img
+    src="/img/get-started_img.png"
+    alt="Shiga app"
+    class="get-started__img"
+  />
+</section>
+
+<style lang="scss">
+  @import "../../styles/_variables.scss";
+  @import "../../styles/_breakpoints.scss";
+
+  .get-started {
+    display: flex;
+    gap: 150px;
+    background-color: $bgSecondaryAlt;
+    color: $textSecondary;
+    padding-bottom: 0;
+
+    @include media("<=tablet") {
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+
+    &__info {
+      @include media("<=tablet") {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .get-started__title {
+        font-size: 2rem;
+        margin-bottom: 10px;
+
+        @include media("<=tablet") {
+          font-size: 1.25rem;
+        }
+
+        span {
+          color: $bgTertiary;
+        }
+      }
+
+      .get-started__desc {
+        margin-bottom: 40px;
+      }
+
+      .get-started__store-links {
+        display: flex;
+        gap: 20px;
+
+        li > a {
+          background-color: $bgTertiary;
+          padding: 15px 20px;
+          border-radius: 50px;
+          display: flex;
+          align-items: center;
+
+          @include media("<=tablet") {
+            padding: 10px 15px;
+          }
+
+          img {
+            width: 100px;
+
+            @include media("<=tablet") {
+              width: 75px;
+            }
+          }
+        }
+      }
+    }
+
+    &__img {
+      max-width: 450px;
+    }
+  }
+</style>

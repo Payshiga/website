@@ -1,0 +1,198 @@
+---
+---
+
+<footer class="footer">
+  <div class="footer__nav">
+    <div class="footer__tagline-qr">
+      <h3>One wallet<br />global payment</h3>
+
+      <div class="qr-code">
+        <img src="/img/qr-code.png" alt="qr code to download app" />
+        <div>
+          <span>Scan QR code<br />to download<br />the Shiga app</span>
+          <img src="/img/hero-qr-icon.png" alt="arrow pointing left" />
+        </div>
+      </div>
+
+      <ul class="footer__store-links">
+        <li class="footer__appstore">
+          <a href="/"
+            ><img src="/img/appstore-alt.png" alt="appstore info graphic" /></a
+          >
+        </li>
+        <li class="footer__appstore">
+          <a href="/"
+            ><img
+              src="/img/playstore-alt.png"
+              alt="playstore info graphic"
+            /></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer__nav--mid">
+      <ul class="footer__company list-spaced">
+        <li class="grey-500">Company</li>
+        <li><a href="/">About Us</a></li>
+        <li><a href="/">Careers</a></li>
+      </ul>
+
+      <ul class="footer__learn list-spaced">
+        <li class="grey-500">Learn</li>
+        <li><a href="/">FAQs</a></li>
+        <li><a href="/">Blog</a></li>
+      </ul>
+
+      <ul class="footer__legal list-spaced">
+        <li class="grey-500">Legal</li>
+        <li><a href="/">Privacy Policy</a></li>
+        <li><a href="/">Term of Use</a></li>
+        <li><a href="/">AML Policy</a></li>
+      </ul>
+    </div>
+
+    <ul class="footer__contact">
+      <li class="grey-500">Follow us on</li>
+      <li class="footer__socials">
+        <a href=""><img src="/img/ig.png" alt="instagram icon" /></a>
+        <a href=""><img src="/img/fb.png" alt="facebook icon" /></a>
+        <a href=""><img src="/img/tw.png" alt="twitter icon" /></a>
+      </li>
+
+      <li class="footer__socials">
+        <a href=""><img src="/img/tk.png" alt="tiktok icon" /></a>
+        <a href=""><img src="/img/in.png" alt="LinkedIn icon" /></a>
+      </li>
+
+      <li class="grey-500">Contact us</li>
+      <li><a href="mailto:support@payshiga.com">support@payshiga.com</a></li>
+    </ul>
+  </div>
+
+  <div class="footer__info">
+    <div class="footer__rights">
+      <img src="/img/logo.png" alt="Shiga logo" class="footer__logo" />
+      <p class="grey-500">© 2022 Payshiga Technologies. All rights reserved</p>
+    </div>
+
+    <div class="footer__location">
+      <p class="footer__country grey-500">🇺🇸 United States of America</p>
+      <p class="footer__addr">8th The Green, Ste A. Kent, DE 19901</p>
+    </div>
+  </div>
+</footer>
+
+<style lang="scss">
+  @import "../../styles/_variables.scss";
+  @import "../../styles/_breakpoints.scss";
+
+  .footer {
+    &__nav {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 160px;
+
+      @include media("<=tablet") {
+        row-gap: 70px;
+        margin-bottom: 60px;
+      }
+
+      @include media("<=tablet") {
+        flex-direction: column;
+      }
+
+      .footer__tagline-qr {
+        h3 {
+          text-transform: uppercase;
+          font-size: 1.5rem;
+          margin-bottom: 50px;
+        }
+
+        .footer__store-links {
+          display: none;
+          gap: 20px;
+
+          @include media("<=tablet") {
+            display: flex;
+          }
+
+          li > a {
+            background-color: $bgSecondary;
+            padding: 10px 15px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+
+            img {
+              width: 75px;
+            }
+          }
+        }
+      }
+
+      &--mid {
+        display: flex;
+        gap: 75px;
+
+        @include media("<=tablet") {
+          flex-wrap: wrap;
+        }
+      }
+
+      .footer__contact {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        row-gap: 20px;
+
+        @include media("<=tablet") {
+          text-align: left;
+          align-items: flex-start;
+        }
+
+        .footer__socials {
+          display: flex;
+
+          a > img {
+            width: 32px;
+          }
+        }
+      }
+    }
+
+    .footer__info {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      @include media("<=tablet") {
+        flex-direction: column-reverse;
+        row-gap: 50px;
+        align-items: flex-start;
+      }
+
+      .footer__rights > .footer__logo {
+        width: 67px;
+        margin-bottom: 15px;
+
+        @include media("<=tablet") {
+          width: 57px;
+        }
+      }
+
+      .footer__location {
+        text-align: right;
+
+        @include media("<=tablet") {
+          text-align: left;
+        }
+
+        .footer__country {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+</style>

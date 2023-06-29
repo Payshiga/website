@@ -1,0 +1,121 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style lang="scss" is:global>
+  @import "../../styles/_typography.scss";
+  @import "../../styles/_variables.scss";
+  @import "../../styles/_breakpoints.scss";
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --accent: 124, 58, 237;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      #da62c4 30%,
+      white 60%
+    );
+  }
+
+  html {
+    font-size: 1rem;
+    // font-size: clamp(1rem, 0.95rem + 0.15vw, 1.25rem);
+  }
+
+  body {
+    font-family: Shiga sans;
+    background-color: $bgPrimary;
+    color: $textPrimary;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: Shiga display;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  section,
+  footer {
+    padding: 100px 2rem;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    @include media("<=tablet") {
+      padding: 50px 1rem;
+    }
+  }
+
+  .qr-code {
+    display: flex;
+    column-gap: 25px;
+
+    @include media("<=tablet") {
+      display: none;
+    }
+
+    img {
+      width: 120px;
+    }
+
+    div {
+      span {
+        display: block;
+        max-width: 160px;
+        margin-bottom: 15px;
+      }
+
+      img {
+        width: 50px;
+      }
+    }
+  }
+
+  .grey-500 {
+    font-weight: 500;
+    color: $textTertiary;
+  }
+
+  .list-spaced {
+    li:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+</style>

@@ -1,0 +1,161 @@
+---
+---
+
+<section class="hero">
+  <div class="hero__info">
+    <div class="hero__info--top">
+      <h1 class="hero__title">One wallet<br />Global payment</h1>
+      <p class="hero__desc">
+        Shiga by Payshiga is the easiest way to make hassle-free cross-border
+        payments on the go.
+      </p>
+    </div>
+
+    <div class="qr-code">
+      <img src="/img/qr-code.png" alt="qr code to download app" />
+      <div>
+        <span>Scan QR code<br />to download<br />the Shiga app</span>
+        <img src="/img/hero-qr-icon.png" alt="arrow pointing left" />
+      </div>
+    </div>
+
+    <ul class="hero__store-links">
+      <li class="hero__appstore">
+        <a href="/"
+          ><img src="/img/appstore-alt.png" alt="appstore info graphic" /></a
+        >
+      </li>
+      <li class="hero__appstore">
+        <a href="/"
+          ><img src="/img/playstore-alt.png" alt="playstore info graphic" /></a
+        >
+      </li>
+    </ul>
+
+    <div class="hero__trusted">
+      <p>Trusted by the fast-growing companies as seen on:</p>
+      <ul>
+        <li><img src="/img/techpoint.svg" alt="Techpoint logo" /></li>
+        <li><img src="/img/guardian_logo.svg" alt=" Guardian logo" /></li>
+        <li><img src="/img/techcrunch.svg" alt=" TechCrunch logo" /></li>
+        <li><img src="/img/forbes_logo.svg" alt="Forbes logo" /></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="hero__img">
+    <img src="/img/hero-phone.png" alt="Payshiga app" />
+  </div>
+</section>
+
+<style lang="scss">
+  @import "../../styles/_variables.scss";
+  @import "../../styles/_breakpoints.scss";
+
+  .hero {
+    height: 100vh;
+    padding-top: 100px;
+    display: flex;
+    column-gap: 36px;
+
+    @include media("<=tablet") {
+      text-align: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      row-gap: 90px;
+
+      @include media("<=tablet") {
+        align-items: center;
+      }
+
+      &--top {
+        .hero__title {
+          font-size: 3rem;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+
+          @include media("<=tablet") {
+            font-size: 1.5rem;
+          }
+        }
+
+        .hero__desc {
+          color: $textTertiary;
+          max-width: 517px;
+        }
+      }
+
+      .qr-code {
+        @include media("<=tablet") {
+          display: none;
+        }
+      }
+
+      .hero__store-links {
+        display: none;
+        gap: 20px;
+
+        @include media("<=tablet") {
+          display: flex;
+        }
+
+        li > a {
+          background-color: $bgSecondary;
+          padding: 10px 15px;
+          border-radius: 50px;
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 75px;
+          }
+        }
+      }
+
+      .hero__trusted {
+        p {
+          margin-bottom: 30px;
+        }
+
+        ul {
+          display: flex;
+          gap: 30px;
+
+          @include media("<=tablet") {
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+
+          li {
+            height: 100%;
+
+            img {
+              filter: grayscale(100);
+
+              @include media("<=tablet") {
+                width: 100px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__img {
+      margin-top: 50px;
+
+      @include media("<=tablet") {
+        display: none;
+      }
+
+      img {
+        max-width: 410px;
+      }
+    }
+  }
+</style>
