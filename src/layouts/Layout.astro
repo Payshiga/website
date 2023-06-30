@@ -31,19 +31,10 @@ const { title } = Astro.props;
     box-sizing: border-box;
   }
 
-  :root {
-    --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      #da62c4 30%,
-      white 60%
-    );
-  }
-
   html {
     font-size: 1rem;
     // font-size: clamp(1rem, 0.95rem + 0.15vw, 1.25rem);
+    scroll-behavior: smooth;
 
     @include media("<=tablet") {
       font-size: 0.9rem;
