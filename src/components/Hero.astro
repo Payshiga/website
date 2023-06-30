@@ -7,7 +7,9 @@
       <h1 class="hero__title">One wallet<br />Global payment</h1>
       <p class="hero__desc">
         Shiga by Payshiga is the easiest way to make hassle-free cross-border
-        payments on the go.
+        payments on the go. <span class="text-mobile"
+          >Send money to anyone, anywhere, anytime, for zero fees.</span
+        >
       </p>
     </div>
 
@@ -49,8 +51,8 @@
 </section>
 
 <style lang="scss">
-  @import "../../styles/_variables.scss";
-  @import "../../styles/_breakpoints.scss";
+  @import "../styles/_variables.scss";
+  @import "../styles/_breakpoints.scss";
 
   .hero {
     height: 100vh;
@@ -80,7 +82,15 @@
           margin-bottom: 20px;
 
           @include media("<=tablet") {
-            font-size: 1.5rem;
+            font-size: 2rem;
+          }
+
+          .text-mobile {
+            display: none;
+
+            @include media("<=tablet") {
+              display: inline;
+            }
           }
         }
 
@@ -133,6 +143,10 @@
 
           li {
             height: 100%;
+
+            &:last-child > img {
+              width: 75px;
+            }
 
             img {
               filter: grayscale(100);
