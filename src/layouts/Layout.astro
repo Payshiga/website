@@ -21,9 +21,9 @@ const { title } = Astro.props;
   </body>
 </html>
 <style lang="scss" is:global>
-  @import "../../styles/_typography.scss";
-  @import "../../styles/_variables.scss";
-  @import "../../styles/_breakpoints.scss";
+  @import "../styles/_typography.scss";
+  @import "../styles/_variables.scss";
+  @import "../styles/_breakpoints.scss";
 
   * {
     margin: 0;
@@ -44,6 +44,10 @@ const { title } = Astro.props;
   html {
     font-size: 1rem;
     // font-size: clamp(1rem, 0.95rem + 0.15vw, 1.25rem);
+
+    @include media("<=tablet") {
+      font-size: 0.9rem;
+    }
   }
 
   body {
