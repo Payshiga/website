@@ -82,7 +82,7 @@ const { title, desc, imgSrc, imgSrcMb, altText, section } = Astro.props;
         font-size: 0.8rem;
       }
 
-      @include media(">=desktop") {
+      @include media(">tablet") {
         margin-top: 30px;
       }
     }
@@ -91,24 +91,56 @@ const { title, desc, imgSrc, imgSrcMb, altText, section } = Astro.props;
   .first {
     background-color: $bgSecondaryAlt;
     color: $textSecondary;
+
+    @include media(">=desktop") {
+      position: relative;
+      padding-top: 150px;
+
+      .feature__info {
+        position: absolute;
+        top: 100px;
+        margin-right: 10%;
+      }
+    }
   }
 
   .second {
-    .feature__info {
-      align-self: flex-end;
+    @include media(">=desktop") {
+      position: relative;
+
+      .feature__info {
+        align-self: flex-end;
+        position: absolute;
+        margin-right: 10%;
+      }
     }
   }
 
   .third {
     background-color: $bgSecondaryAlt;
     color: $textSecondary;
+
+    @include media(">=desktop") {
+      position: relative;
+
+      .feature__info {
+        position: absolute;
+        margin-left: 4%;
+      }
+    }
   }
 
   .fourth {
     background-color: $bgTertiary;
 
-    .feature__info {
-      align-self: flex-start;
+    @include media(">=desktop") {
+      position: relative;
+
+      .feature__info {
+        align-self: flex-start;
+        position: absolute;
+        margin-left: 4%;
+      }
     }
 
     .feature__nb {
