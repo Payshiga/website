@@ -1,0 +1,104 @@
+---
+const { title, desc, imgSrc, imgSrcMb, altText, section } = Astro.props;
+---
+
+<section
+  class={`feature
+  ${section === 1 && "first"}
+  ${section === 2 && "second"}
+  ${section === 3 && "third"}
+  ${section === 4 && "fourth"}`}
+>
+  <div class="feature__info">
+    <h2 class="feature__title">{title}</h2>
+    <p class="feature__desc">{desc}</p>
+  </div>
+
+  <div class="feature__img">
+    <img src={imgSrc} alt={altText} class="feature__img--desktop" />
+    <img src={imgSrcMb} alt={altText} class="feature__img--mobile" />
+  </div>
+
+  <p class="feature__nb">
+    Shiga by Payshiga is a financial platform, not a bank. Therefore, banking
+    services provided on this platform, and debit cards, are issued by banking
+    partners.
+  </p>
+</section>
+
+<style lang="scss">
+  @import "../styles/_variables.scss";
+  @import "../styles/_breakpoints.scss";
+
+  .feature {
+    display: flex;
+    flex-direction: column;
+
+    @include media("<=tablet") {
+      text-align: center;
+      row-gap: 50px;
+    }
+
+    &__info {
+      max-width: 500px;
+
+      .feature__title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+
+        @include media("<=tablet") {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    &__img {
+      &--desktop {
+        @include media("<=tablet") {
+          display: none;
+        }
+      }
+      &--mobile {
+        display: none;
+
+        @include media("<=tablet") {
+          display: block;
+        }
+      }
+    }
+
+    &__nb {
+      text-align: right;
+      max-width: 650px;
+      color: $textTertiary;
+      align-self: flex-end;
+
+      @include media("<=tablet") {
+        text-align: center;
+        align-self: center;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .first {
+    background-color: $bgSecondaryAlt;
+    color: $textSecondary;
+  }
+
+  .second {
+  }
+
+  .third {
+    background-color: $bgSecondaryAlt;
+    color: $textSecondary;
+  }
+
+  .fourth {
+    background-color: $bgTertiary;
+
+    .feature__nb {
+      color: #edeefc;
+    }
+  }
+</style>
