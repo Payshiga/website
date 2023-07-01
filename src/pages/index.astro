@@ -5,6 +5,7 @@ import Hero from "../components/Hero.astro";
 import SectionOne from "../components/SectionOne.astro";
 import GetStarted from "../components/GetStarted.astro";
 import Footer from "../components/Footer.astro";
+import Feature from "../components/Feature.astro";
 ---
 
 <Layout title="PayShiga">
@@ -13,7 +14,38 @@ import Footer from "../components/Footer.astro";
       <Nav />
       <Hero />
       <SectionOne />
-
+      <Feature
+        title="Hold and manage multiple currencies in one wallet."
+        desc="Receive and hold multiple currencies across the world. Our unique technology will enable you to convert and send in minutes. We offer a one-wallet solution that provides the convenience of a modern-day migrant Neobank."
+        imgSrc="/img/illustration-1.svg"
+        imgSrcMb="/img/illustration-mobile-1.svg"
+        altText="shiga info graphic"
+        section={1}
+      />
+      <Feature
+        title="Make payments and other relocation costs seamlessly"
+        desc="We facilitate payments for tuition, accommodation, and other migration-related costs in over 5000 Universities across over 100 countries worldwide. With our currencies calculator, you can convert rates as you go and pay your fees without breaking a sweat."
+        imgSrc="/img/illustration-2.svg"
+        imgSrcMb="/img/illustration-mobile-2.svg"
+        altText="shiga info graphic"
+        section={2}
+      />
+      <Feature
+        title="Shop easily in 10m stores & merchant sites worldwide."
+        desc="Spend with our virtual cards and pay for subscriptions online. You can also spend in-store by adding your card to timesaving payment integration like Apple pay and Google pay. Receive instant notifications when you finish."
+        imgSrc="/img/illustration-3.svg"
+        imgSrcMb="/img/illustration-mobile-3.svg"
+        altText="shiga info graphic"
+        section={3}
+      />
+      <Feature
+        title="Bank-grade security for all of your transactions."
+        desc="Transactions are encrypted and protected with 256-bit AES bank-level encryption with the provision of security between your devices and our servers, ensuring your personal and transaction details are always kept private."
+        imgSrc="/img/illustration-4.svg"
+        imgSrcMb="/img/illustration-mobile-4.svg"
+        altText="shiga info graphic"
+        section={4}
+      />
       <GetStarted />
       <Footer />
     </div>

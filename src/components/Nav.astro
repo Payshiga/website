@@ -3,23 +3,55 @@
 
 <nav class="nav">
   <div class="nav__logo">
-    <img src="/img/logo.png" alt="Shiga logo" />
+    <img src="/img/logo.svg" alt="Shiga logo" />
   </div>
 
   <ul class="nav__list">
-    <li class="nav__item">Career</li>
-    <li class="nav__item">Blog</li>
-    <li class="nav__item">FAQs</li>
+    <li class="nav__item"><a href="">Career</a></li>
+    <li class="nav__item"><a href="#">Blog</a></li>
+    <li class="nav__item"><a href="#">FAQs</a></li>
   </ul>
 
-  <a href="/" class="nav__download-btn"> Download App</a>
+  <a href="#get-started" class="nav__download-btn">Download App</a>
 
-  <img src="/img/burger-icon.svg" alt="burger icon" class="nav__burger" />
+  <img
+    src="/img/burger-icon.svg"
+    alt="burger icon"
+    class="nav__burger"
+    id="burger-icon"
+  />
+
+  <section class="nav__overlay" id="overlay">
+    <ul>
+      <li><a href="">Career</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">FAQs</a></li>
+    </ul>
+
+    <p>
+      Shiga by Payshiga is a financial platform, not a bank. Therefore, banking
+      services provided on this platform, and debit cards, are issued by banking
+      partners.
+    </p>
+  </section>
 </nav>
 
+<script>
+  let burgerIcon = document.getElementById("burger-icon");
+  let overlay = document.getElementById("overlay");
+
+  burgerIcon.addEventListener("click", () => {
+    burgerIcon.getAttribute("src") === "/img/close-icon.svg"
+      ? burgerIcon.setAttribute("src", "/img/burger-icon.svg")
+      : burgerIcon.setAttribute("src", "/img/close-icon.svg");
+
+    overlay.classList.toggle("overlay-show");
+  });
+</script>
+
 <style lang="scss">
-  @import "../../styles/_variables.scss";
-  @import "../../styles/_breakpoints.scss";
+  @import "../styles/_variables.scss";
+  @import "../styles/_breakpoints.scss";
 
   .nav {
     width: 100%;
@@ -30,14 +62,17 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 2;
 
     @include media("<=tablet") {
-      padding: 1rem;
+      padding: 2rem;
     }
 
     &__logo {
       img {
         width: 67px;
+        position: relative;
+        z-index: 2;
 
         @include media("<=tablet") {
           width: 57px;
@@ -48,6 +83,9 @@
     &__burger {
       display: none;
       width: 16px;
+      position: relative;
+      z-index: 2;
+      cursor: pointer;
 
       @include media("<=tablet") {
         display: block;
@@ -72,6 +110,35 @@
       @include media("<=tablet") {
         display: none;
       }
+    }
+
+    &__overlay {
+      width: 100%;
+      height: 100vh;
+      background-color: $bgPrimary;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      left: 100%;
+      padding: 75px 2rem 50px;
+      z-index: 1;
+      transition: 0.3s ease-in-out;
+
+      ul > li:not(:last-child) {
+        margin-bottom: 25px;
+      }
+
+      p {
+        text-align: center;
+        color: #6f6f70;
+        font-size: 0.75rem;
+      }
+    }
+
+    .overlay-show {
+      left: 0;
     }
   }
 </style>
