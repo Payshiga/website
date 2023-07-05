@@ -10,8 +10,11 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Make hassle-free cross-border
-        payments on the go" />
+    <meta
+      name="description"
+      content="Make hassle-free cross-border
+        payments on the go"
+    />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
@@ -34,7 +37,7 @@ const { title } = Astro.props;
 
   html {
     font-size: 1rem;
-    // font-size: clamp(1rem, 0.95rem + 0.15vw, 1.25rem);
+    font-size: clamp(1rem, 0.95rem + 0.15vw, 1.25rem);
     scroll-behavior: smooth;
 
     @include media("<=tablet") {
@@ -69,7 +72,8 @@ const { title } = Astro.props;
   }
 
   section,
-  footer {
+  footer,
+  nav {
     padding: 100px 2rem;
     padding-left: 100px;
     padding-right: 100px;

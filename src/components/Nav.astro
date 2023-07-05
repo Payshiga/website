@@ -58,15 +58,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
 
-    @include media("<=tablet") {
-      padding: 2rem;
-    }
+    // @include media("<=tablet") {
+    //   padding: 2rem;
+    // }
+
+    // @include media(">=desktop") {
+    //   padding: 2rem 4rem;
+    // }
 
     &__logo {
       img {
