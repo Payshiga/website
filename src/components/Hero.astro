@@ -59,11 +59,20 @@
     padding-top: 100px;
     display: flex;
     column-gap: 36px;
+    justify-content: center;
 
     @include media("<=tablet") {
       text-align: center;
       justify-content: center;
       height: 100%;
+    }
+
+    @include media(">=345px") {
+      height: 100vh;
+    }
+
+    @include media(">=desktop") {
+      justify-content: center;
     }
 
     &__info {
@@ -73,6 +82,10 @@
 
       @include media("<=tablet") {
         align-items: center;
+      }
+
+      @include media(">=LGDesktop") {
+        row-gap: 7rem;
       }
 
       &--top {
@@ -171,8 +184,16 @@
         display: none;
       }
 
+      @include media(">=LGDesktop") {
+        margin-top: 125px;
+      }
+
       img {
         max-width: 410px;
+
+        @include media(">=LGDesktop") {
+          max-width: 510px;
+        }
       }
     }
   }
