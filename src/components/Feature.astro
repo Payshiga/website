@@ -94,12 +94,13 @@ const { title, desc, imgSrc, imgSrcMb, altText, section } = Astro.props;
 
     @include media(">=desktop") {
       position: relative;
-      padding-top: 150px;
+      padding-top: 170px;
 
       .feature__info {
         position: absolute;
-        top: 100px;
+        top: 80px;
         margin-right: 10%;
+        paddiing-bottom: 10px;
       }
     }
   }
@@ -112,6 +113,12 @@ const { title, desc, imgSrc, imgSrcMb, altText, section } = Astro.props;
         align-self: flex-end;
         position: absolute;
         margin-right: 10%;
+      }
+    }
+
+    @include media(">=LGDesktop") {
+      .feature__info {
+        margin-right: 18%;
       }
     }
   }
@@ -140,6 +147,12 @@ const { title, desc, imgSrc, imgSrcMb, altText, section } = Astro.props;
         align-self: flex-start;
         position: absolute;
         margin-left: 4%;
+      }
+    }
+
+    @include media(">=LGDesktop") {
+      .feature__info {
+        margin-left: 10%;
       }
     }
 
