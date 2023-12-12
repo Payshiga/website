@@ -1,0 +1,11 @@
+[
+    {
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.payshiga",
+        "sha256_cert_fingerprints":
+          ["CB:E3:83:34:B7:FD:74:34:8A:EE:E6:3E:B5:E5:F9:90:6D:59:9D:45:2B:62:FC:17:5D:A9:00:5C:44:0B:CF:14"]
+      }
+    }
+  ]
