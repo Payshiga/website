@@ -1,28 +1,24 @@
----
----
-
+<!-- Fixed HTML Section -->
 <section class="section-one">
   <div class="section-one__info">
     <h2 class="section-one__title">
-      Make seamless cross-border payments to 190 countries on the go with zero
+      Make seamless cross-border payments to 21+ countries on the go with zero
       fees.
     </h2>
     <p class="section-one__desc">
       Send money to anyone, anywhere, anytime, for zero fees. We offer the best
       FX rates with our lightning-speed transfers.
     </p>
-    <ul class="section-one__store-links">
-      <li class="section-one__appstore">
-        <a href="https://apps.apple.com/gb/app/shiga/id6444189418"
-          ><img src="/img/appstore.svg" alt="appstore info graphic" /></a
-        >
-      </li>
-      <li class="section-one__appstore">
-        <a href="https://play.google.com/store/apps/details?id=com.payshiga"
-          ><img src="/img/playstore.svg" alt="playstore info graphic" /></a
-        >
-      </li>
-    </ul>
+
+    <!-- Button Container -->
+    <div class="section-one__buttons">
+      <a href="#get-started" class="download-btn"
+        >Get Started with Shiga Business</a
+      >
+      <a href="#get-started" class="download-btn"
+        >Get Started with Shiga Mobile</a
+      >
+    </div>
   </div>
 
   <img
@@ -37,12 +33,13 @@
   @import "../styles/_breakpoints.scss";
 
   .section-one {
-    // height: 400px;
     background-color: $bgSecondary;
     color: $textSecondary;
     display: flex;
     justify-content: center;
-    padding-bottom: 0;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 40px;
 
     @include media("<=tablet") {
       display: none;
@@ -54,10 +51,12 @@
       .section-one__title {
         font-size: 2rem;
         margin-bottom: 10px;
+        line-height: 1.2;
       }
 
       .section-one__desc {
         margin-bottom: 40px;
+        line-height: 1.6;
       }
 
       .section-one__store-links {
@@ -78,10 +77,47 @@
       }
     }
 
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      @include media("<=tablet") {
+        display: none;
+      }
+    }
+
     &__img {
       max-width: 400px;
-      margin-top: 150px;
-      // align-self: flex-end;
+      height: auto;
+    }
+
+    // Fixed button styling - matching the HTML class name
+    .download-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #000000;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 500;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+
+      &:hover {
+        background-color: #333333;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+
+      @include media("<=tablet") {
+        display: none;
+      }
     }
   }
 </style>
