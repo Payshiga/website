@@ -2,5 +2,5 @@ import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   site: 'https://payshiga.github.io/website/',
-  base: '/website/', // this is for update
+  base: '/website/',
 });
