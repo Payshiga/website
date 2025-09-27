@@ -3,7 +3,7 @@
 
 <nav class="nav">
   <div class="nav__logo">
-    <img src="/img/logo.svg" alt="Shiga logo" />
+    <img src="/website/img/logo.svg" alt="Shiga logo" />
   </div>
 
   <ul class="nav__list">
@@ -17,44 +17,32 @@
   <a href="#get-started" class="nav__download-btn">Download App</a>
 
   <img
-    src="/img/burger-icon.svg"
+    src="/website/img/burger-icon.svg"
     alt="burger icon"
     class="nav__burger"
     id="burger-icon"
   />
 
-  <section class="nav__overlay" id="overlay">
-    <ul>
-      <li>
-        <a
-          href="https://www.notion.so/payshiga/Careers-at-Shiga-6efbe406ac5942478a10c1fdbf13455d?pvs=4"
-          >Career</a
-        >
-      </li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">FAQs</a></li>
-    </ul>
-
-    <p>
-      Shiga by Payshiga is a financial platform, not a bank. Therefore, banking
-      services provided on this platform, and debit cards, are issued by banking
-      partners.
-    </p>
-  </section>
+  <section class="nav__overlay" id="overlay">...</section>
 </nav>
 
 <script>
-  let burgerIcon = document.getElementById("burger-icon");
-  let overlay = document.getElementById("overlay");
+  const burgerImg = document.getElementById("burger-icon");
+  const overlay = document.getElementById("overlay");
 
-  burgerIcon.addEventListener("click", () => {
-    burgerIcon.getAttribute("src") === "/img/close-icon.svg"
-      ? burgerIcon.setAttribute("src", "/img/burger-icon.svg")
-      : burgerIcon.setAttribute("src", "/img/close-icon.svg");
+  burgerImg.addEventListener("click", () => {
+    const currentSrc = burgerImg.getAttribute("src");
+
+    if (currentSrc.includes("burger-icon.svg")) {
+      burgerImg.setAttribute("src", "/website/img/close-icon.svg");
+    } else {
+      burgerImg.setAttribute("src", "/website/img/burger-icon.svg");
+    }
 
     overlay.classList.toggle("overlay-show");
   });
 </script>
+
 
 <style lang="scss">
   @import "../styles/_variables.scss";
