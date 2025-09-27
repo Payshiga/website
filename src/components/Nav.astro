@@ -3,7 +3,7 @@
 
 <nav class="nav">
   <div class="nav__logo">
-    <img src="/website/img/logo.svg" alt="Shiga logo" />
+    <img src="/img/logo.svg" alt="Shiga logo" />
   </div>
 
   <ul class="nav__list">
@@ -17,7 +17,7 @@
   <a href="#get-started" class="nav__download-btn">Download App</a>
 
   <img
-    src="/website/img/burger-icon.svg"
+    src="/img/burger-icon.svg"
     alt="burger icon"
     class="nav__burger"
     id="burger-icon"
@@ -34,9 +34,9 @@
     const currentSrc = burgerImg.getAttribute("src");
 
     if (currentSrc.includes("burger-icon.svg")) {
-      burgerImg.setAttribute("src", "/website/img/close-icon.svg");
+      burgerImg.setAttribute("src", "/img/close-icon.svg");
     } else {
-      burgerImg.setAttribute("src", "/website/img/burger-icon.svg");
+      burgerImg.setAttribute("src", "/img/burger-icon.svg");
     }
 
     overlay.classList.toggle("overlay-show");
