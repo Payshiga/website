@@ -23,9 +23,15 @@
       </div>
     </div>
 
-    <div>
-         <a href="#get-started" class="nav__download-btn">Start as a merchant with Shiga Business</a>
-          <a href="#get-started" class="nav__download-btn">Become a Shiga Mobile user</a>
+    <div class="hero_btns">
+         <ul class="hero_btns_ul">
+          <li>  
+            <a href="#get-started" class="nav__download_btn">Start as a merchant with Shiga Business</a>
+          </li>
+          <li> 
+            <a href="#get-started" class="nav__download_btn">Become a Shiga Mobile user</a>
+          </li>
+         </ul>
     </div>
 
     <ul class="hero__store-links">
@@ -56,6 +62,17 @@
 <style lang="scss">
   @import "../styles/_variables.scss";
   @import "../styles/_breakpoints.scss";
+
+  .nav__download_btn{
+     padding: 8px 16px;
+      background-color: $bgSecondary;
+      border-radius: 20px;
+      color: $bgPrimary;
+
+      @include media("<=tablet") {
+        display: none;
+      }
+  }
 
   .hero {
     height: 100vh;
